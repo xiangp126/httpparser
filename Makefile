@@ -7,7 +7,7 @@ BINDIR = bin
 
 SRCFILES = $(wildcard $(SRCDIR)/*.cpp)
 OBJFILES = $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCFILES))
-TARGET = $(BINDIR)/main
+TARGET = $(BINDIR)/httpparser
 
 .PHONY: all clean
 
