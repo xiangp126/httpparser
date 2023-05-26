@@ -21,8 +21,8 @@ void handleHttpResponse(const string &httpResponseString) {
     HttpResponseParser httpParser(httpResponseString);
 
     // Output the parsed data
-    if ((httpParser.isvalidResponse())) {
-        cout << "HTTP Response is valid" << endl;
+    if ((!httpParser.isvalidResponse())) {
+        // cout << "HTTP Response is valid" << endl;
     } else {
         cout << "HTTP Version: " << httpParser.getHttpVersion() << endl;
         cout << "Status: " << httpParser.getStatusCode() << endl;

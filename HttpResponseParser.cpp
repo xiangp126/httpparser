@@ -26,6 +26,8 @@ HttpResponseParser::HttpResponseParser() {
 }
 
 HttpResponseParser::HttpResponseParser(const string &message) {
+    validResponse = true;
+
     /*
      * Parse the HTTP Response Message
      * For Windows, the line separator is "\r\n"
@@ -35,7 +37,7 @@ HttpResponseParser::HttpResponseParser(const string &message) {
     size_t statusLinePosEnd = message.find("\n");
     if (statusLinePosEnd == string::npos) {
         cout << "Invalid HTTP Response Message" << endl;
-        validResponse = false;
+        validResponse = false; // Set validResponse to false
         return;
     }
 

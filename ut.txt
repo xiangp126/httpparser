@@ -21,3 +21,9 @@ Header1: value1
 date: Tue, 22 Jun 2021 22:24:42 GMT
 content-length: 1337
 content-type: image/svg+xml
+
+Header1: value2
+date: Wed, 22 Jun 2021 22:24:42 GMT
+content-length: 88478
+invalid_header
+
