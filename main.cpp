@@ -78,6 +78,11 @@ int main() {
         }
     }
 
+    // Check if there is an incomplete block at the end of the file
+    if (!blockStream.str().empty()) {
+        handleHttpResponse(blockStream.str());
+    }
+
     file.close();
 
     return 0;
