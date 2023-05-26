@@ -22,7 +22,7 @@ void handleHttpResponse(const string &httpResponseString) {
 
     // Output the parsed data
     if ((httpParser.isvalidResponse())) {
-        // cout << "HTTP Response is valid" << endl;
+        cout << "HTTP Response is valid" << endl;
     } else {
         cout << "HTTP Version: " << httpParser.getHttpVersion() << endl;
         cout << "Status: " << httpParser.getStatusCode() << endl;
@@ -62,14 +62,14 @@ int main() {
         return {};
     }
 
-    vector<string> blocks;
+    // vector<string> blocks;
     string line;
     stringstream blockStream;
 
     while (getline(file, line)) {
         if (line.empty()) {
             // Reached a blank line, we got a whole http response block.
-            blocks.push_back(blockStream.str());
+            // blocks.push_back(blockStream.str());
             handleHttpResponse(blockStream.str());
             blockStream.str(""); // Clear the block stream
         } else {

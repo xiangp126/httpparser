@@ -10,7 +10,14 @@ Transfer-encoding: chunked
 invalid_header
 date: Tue, 22 Jun 2021 22:24:42 GMT
 
+HTTP/2.0 404 Not Found
+cache-control: public
+Transfer-encoding: chunked
+invalid_header
+date: Tue, 33 Jun 2021 22:24:42 GMT
+invalid_header
+
 Header1: value1
 date: Tue, 22 Jun 2021 22:24:42 GMT
 content-length: 1337
-
+content-type: image/svg+xml
